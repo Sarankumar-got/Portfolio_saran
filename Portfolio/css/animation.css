@@ -1,0 +1,155 @@
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-18px); }
+}
+
+@keyframes nameReveal {
+    from {
+        opacity: 0;
+        transform: translateY(32px);
+        filter: blur(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes scrollDot {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, 20px);
+    }
+}
+
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+@keyframes ripple {
+    to {
+        opacity: 0;
+        transform: scale(4);
+    }
+}
+
+@keyframes trailFade {
+    to {
+        opacity: 0;
+        transform: scale(3);
+    }
+}
+
+@keyframes skeleton {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(100%); }
+}
+
+@keyframes successPop {
+    0% { transform: scale(.8); opacity: 0; }
+    70% { transform: scale(1.04); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.hero {
+    animation: gradient 14s ease infinite;
+}
+
+.floating-icons i {
+    animation: float 6s ease-in-out infinite;
+}
+
+.floating-icons i:nth-child(2),
+.floating-icons i:nth-child(4) {
+    animation-delay: -2s;
+}
+
+.name-reveal {
+    animation: nameReveal 1s cubic-bezier(.2, .8, .2, 1) both;
+}
+
+.profile-img {
+    animation: float 5.5s ease-in-out infinite;
+}
+
+.scroll-indicator span {
+    animation: scrollDot 1.7s ease infinite;
+}
+
+.tech-marquee div {
+    animation: marquee 24s linear infinite;
+}
+
+.ripple-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    pointer-events: none;
+    background: rgba(255, 255, 255, .45);
+    transform: scale(0);
+    animation: ripple .65s ease-out;
+}
+
+.tilt-card {
+    transform-style: preserve-3d;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.service-card:hover,
+.project-card:hover,
+.skill-card:hover,
+.neuro-card:hover,
+.certificate-card:hover,
+.contact-action:hover,
+.blog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 28px 80px rgba(13, 110, 253, .22);
+}
+
+.social a:hover,
+.fab:hover,
+.icon-btn:hover {
+    transform: translateY(-3px);
+}
+
+.form-success {
+    animation: successPop .45s ease both;
+}
+
+.typed-cursor {
+    color: var(--primary-2);
+    font-weight: 500;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+    }
+}

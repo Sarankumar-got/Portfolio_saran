@@ -1,0 +1,19 @@
+{
+    "name": "Saran Kumar T Portfolio",
+    "short_name": "Saran Portfolio",
+    "description": "Developer portfolio for Saran Kumar T.",
+    "start_url": "/Portfolio/",
+    "scope": "/Portfolio/",
+    "display": "standalone",
+    "background_color": "#07111f",
+    "theme_color": "#0d6efd",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "icons/favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        }
+    ]
+}
